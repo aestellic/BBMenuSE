@@ -22,12 +22,13 @@ Compatible with Pokémon Red, Blue and Yellow English versions, as well as VC re
 
 BBMenu can be installed inside your savegame using [Arbitrary Code Execution](https://glitchcity.wiki/wiki/Arbitrary_code_execution), thus it can run in **original copies**, unlike any other ROMhacks!
 
-## ✅ What BBMenu allowes you to do:
+## ✅ What BBMenu allows you to do:
 - Use constant effects like **Running, Walking through Walls, Beast Mode, Trainer Avoidance** etc.
 - Get any **Item, Pokémon** or **Moveset**. 
 - Instantly encounter any **Pokémon** or **Trainer** (yes, OAK is included!).
 - Instantly get max **Money, Coins, Badges** etc.
 - Launch custom **mini-games** like **Snake**!
+- See whether Pokemon are **shiny**!
 - All from an in-game menu, with a simple press of **Select button**!
 More details in [here](https://github.com/M4n0zz/BBMenu/blob/main/Features.md).
 
@@ -69,6 +70,7 @@ That being said, here is what every part includes:
 - Part6: Trainers, Instatext, Filldex, Badges, Cash, Coins, Duplicator scripts
 - Part7: Pong
 - Part8: Snake
+- Part9: Shiny Indicator
 
 ---
 
