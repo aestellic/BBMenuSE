@@ -35,7 +35,7 @@ BBMenuSE can be installed inside your savegame using [Arbitrary Code Execution](
 - All from an in-game menu, with a simple press of **Select button**!
 - And... see whether Pokemon are **shiny** in battle or on the summary screen!
 
-More details in [here](https://github.com/aestellic/BBMenu/blob/main/Features.md).
+More details in [here](https://github.com/aestellic/BBMenuSE/blob/main/Features.md).
 
 ---
 
@@ -50,7 +50,7 @@ More details in [here](https://github.com/aestellic/BBMenu/blob/main/Features.md
 
 ## 🔗 Installation
 
-After setting up TimOS (required), you need to insert all [hex code parts](https://github.com/aestellic/BBMenu/tree/main/Installation), the same way you did with the ACE setup.
+After setting up TimOS (required), you need to insert all [hex code parts](https://github.com/aestellic/BBMenuSE/tree/main/Installation), the same way you did with the ACE setup.
 - Copy and paste the code from part1 in the [Nickname Converter](https://timovm.github.io/NicknameConverter/).
 - Write all nickname codes in Nickname Writer and press start in the verification screen of the last code to run it.
 - If you input everything correctly the game does not crash and you can make a save (required for parts 1, 2, and 9). In different case, reset and repeat.
@@ -67,7 +67,7 @@ After setting up TimOS (required), you need to insert all [hex code parts](https
 - **Slip script** allows you to walk through walls. Although it includes some basic prevention, walking outside map's borders risks crashing the game with your savegame being deleted! **Use with Caution!**
   
 ## ⚠ Notes
-Part codes from 2+ are more tolerant to input errors, since their payloads activate only through BBMenuSE and a crash can indicate which part you need to reinstall.
+Part codes from 2-8 are more tolerant to input errors, since their payloads activate only through BBMenuSE and a crash can indicate which part you need to reinstall.
 That being said, here is what every part includes:
 - Part1: Kernel stuff
 - Part2: Constant effect payloads
@@ -79,6 +79,12 @@ That being said, here is what every part includes:
 - Part8: Snake
 - Part9: Shiny Indicator
 - Part10: Shiny Indicator Enabler
+
+---
+
+## 📋 Premade Save Files
+
+If the installation process seems too daunting for you, there are premade save files avaiable [here](https://github.com/aestellic/BBMenuSE/tree/main/Saves)!
 
 ---
 
