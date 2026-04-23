@@ -51,6 +51,7 @@ db low(dmamenu),         high(dmamenu)
 db low(dmarun),          high(dmarun)
 db low(dmabeast),        high(dmabeast)
 db low(dmaescape),       high(dmaescape)
+dw $DC71 ; dmashiny
 dmapointersend:
 
 ; ----------- MSP pointers ------------

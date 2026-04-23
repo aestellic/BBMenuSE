@@ -1,5 +1,5 @@
-# BBMenu
-*The first mod menu for Generation 1 Pokemon Games*
+# BBMenuSE
+*Blip Blop Menu: Shiny Edition*
 
 ---
 
@@ -8,29 +8,34 @@
   <img src="Shots/bbmenu1.jpg" width="200"/>
     <img src="Shots/bbmenu2.jpg" width="200"/>
   <img src="Shots/bbmenu3.jpg" width="200"/>
-  <img src="Shots/bbmenu4.jpg" width="200"/>
 </p>
 <p align="center">
-  <img src="Shots/bbmenu5.jpg" width="200"/>
-    <img src="Shots/bbmenu6.jpg" width="200"/>
+  <img src="Shots/bbmenu4.jpg" width="200"/>
+    <img src="Shots/bbmenu5.jpg" width="200"/>
+  <img src="Shots/bbmenu6.jpg" width="200"/>
+</p>
+<p align="center">
   <img src="Shots/bbmenu7.jpg" width="200"/>
+    <img src="Shots/bbmenu8.jpg" width="200"/>
+  <img src="Shots/bbmenu9.jpg" width="200"/>
 </p>
 
 ---
 
 Compatible with Pokémon Red, Blue and Yellow English versions, as well as VC releases. 
 
-BBMenu can be installed inside your savegame using [Arbitrary Code Execution](https://glitchcity.wiki/wiki/Arbitrary_code_execution), thus it can run in **original copies**, unlike any other ROMhacks!
+BBMenuSE can be installed inside your savegame using [Arbitrary Code Execution](https://glitchcity.wiki/wiki/Arbitrary_code_execution), thus it can run in **original copies**, unlike any other ROMhacks!
 
-## ✅ What BBMenu allows you to do:
+## ✅ What BBMenuSE allows you to do:
 - Use constant effects like **Running, Walking through Walls, Beast Mode, Trainer Avoidance** etc.
 - Get any **Item, Pokémon** or **Moveset**. 
 - Instantly encounter any **Pokémon** or **Trainer** (yes, OAK is included!).
 - Instantly get max **Money, Coins, Badges** etc.
 - Launch custom **mini-games** like **Snake**!
-- See whether Pokemon are **shiny**!
 - All from an in-game menu, with a simple press of **Select button**!
-More details in [here](https://github.com/M4n0zz/BBMenu/blob/main/Features.md).
+- And... see whether Pokemon are **shiny** in battle or on the summary screen!
+
+More details in [here](https://github.com/aestellic/BBMenu/blob/main/Features.md).
 
 ---
 
@@ -38,18 +43,20 @@ More details in [here](https://github.com/M4n0zz/BBMenu/blob/main/Features.md).
 - A **Gameboy** or **3DS** console or a compatible **emulator** (BGB recommended).
 - An **original** copy of English **Pokémon Red, Blue or Yellow**, a **VC release** or an **original ROM file**.
 - TimoVM's [modernized ACE](https://glitchcity.wiki/wiki/Guides:TimoVM%27s_gen_1_ACE_setups) setup.
-- Latest version of [TimOS Script Selector](https://glitchcity.wiki/wiki/Guides:Nickname_Writer_Codes).
-- A cup of coffee and a huge amount of patience, installation will literally take about 4:30 hours to complete!
+- Latest version of [TimOS](https://glitchcity.wiki/wiki/Guides:Nickname_Writer_Codes).
+- A cup of coffee and a huge amount of patience, installation will literally take about 5 hours to complete!
 
 ---
 
 ## 🔗 Installation
 
-After setting up TimOS (required), you need to insert all [hex code parts](https://github.com/M4n0zz/BBMenu/tree/main/Installation), the same way you did with the ACE setup.
+After setting up TimOS (required), you need to insert all [hex code parts](https://github.com/aestellic/BBMenu/tree/main/Installation), the same way you did with the ACE setup.
 - Copy and paste the code from part1 in the [Nickname Converter](https://timovm.github.io/NicknameConverter/).
 - Write all nickname codes in Nickname Writer and press start in the verification screen of the last code to run it.
-- If you input everything correctly the game does not crash and you can make a save (required for parts 1 and 2). In different case, reset and repeat.
-- Repeat the procedure until every hex part is installed. Parts 3+ do not require saving the game, since the payloads are installed directly into the save file.
+- If you input everything correctly the game does not crash and you can make a save (required for parts 1, 2, and 9). In different case, reset and repeat.
+- Repeat the procedure until every hex part is installed. Parts 3-8 do not require saving the game, since the payloads are installed directly into the save file.
+
+**If migrating from stock BBMenu, you only need to (re)install parts 2, 9, and 10. Remember that you must save after installing parts 2 and 9.**
 
 ---
 
@@ -71,6 +78,7 @@ That being said, here is what every part includes:
 - Part7: Pong
 - Part8: Snake
 - Part9: Shiny Indicator
+- Part10: Shiny Indicator Enabler
 
 ---
 
@@ -84,16 +92,17 @@ The kernel continuously runs active payloads in the background and can trigger t
 ## 💬 Contact
 
 Feel free to fork, reuse, or propose new modules!
-- You can find me in [GCRI Discord server](https://discord.gg/EA7jxJ6), ping @M4n0z.
-- You can also get BBMenu ready to play in your save file or support my work [here](https://github.com/M4n0zz).
-- For personalised requests and collaborations feel free to contact me at: manoz.dev25@gmail.com
+- You can find me in [GCRI Discord server](https://discord.gg/EA7jxJ6), ping @aestellic.
 
 ---
 
 ## 🧠 Credits
 
-- Pret for [Red](https://github.com/pret/pokered) and [Yellow](https://github.com/pret/pokeyellow) disassemblies, which allowed me to reverse engineer crucial game's logic and make the menu functional.
-- [RGBDS](https://rgbds.gbdev.io/), which allowed me to develop [QuickRGBDS wrapper](https://github.com/M4n0zz/QuickRGBDS) and make this super complicated project easier to build and maintain.
-- My mentor TimoVM from [Glitch City Research Institute](https://glitchcity.wiki/wiki/Main_Page) and his [ACE guides](https://glitchcity.wiki/wiki/Guides:TimoVM%27s_gen_1_ACE_setups).
-- Everyone in [GCRI Discord channel](https://discord.gg/EA7jxJ6). Thank you guys for your motivation and support!
+- Pret for [Red](https://github.com/pret/pokered) and [Yellow](https://github.com/pret/pokeyellow) disassemblies, which allowed us to reverse engineer crucial game logic and make the menu and shiny indicator functional.
+- [RGBDS](https://rgbds.gbdev.io/), the incredibly powerful compiler used for this project.
+- [QuickRGBDS wrapper](https://github.com/M4n0zz/QuickRGBDS), which made this super complicated project easier to build.
+- TimoVM from [Glitch City Research Institute](https://glitchcity.wiki/wiki/Main_Page) and his [ACE guides](https://glitchcity.wiki/wiki/Guides:TimoVM%27s_gen_1_ACE_setups).
+- [M4n0zz](https://github.com/M4n0zz) from Glitch City Research Institute for creating the QuickRGBDS and the original BBMenu, as well as helping me with modifying BBMenu.
+- [Cilerba](https://www.youtube.com/@Cilerba), who originally added [shiny indicators to vanilla Red and Blue via ACE](https://github.com/cilerba/ace).
+- Everyone in [GCRI Discord channel](https://discord.gg/EA7jxJ6). Thank you folks for your motivation and support!
 

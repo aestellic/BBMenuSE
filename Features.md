@@ -108,3 +108,10 @@ Starts a classic Snake minigame.
 * Shows current score and high score.
 * High score is saved to the save file.
 
+### **Shiny Indicator**
+
+Shows an exclamation mark if a Pokemon is shiny
+* Runs automatically (you do not need to toggle this in the menu)
+* In battle, the exclamation mark appears below the name of opposing Pokemon
+* On the summary screen, the exclamation mark appears below the nickname of a Pokemon
+

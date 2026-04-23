@@ -1,6 +1,6 @@
 /*
 
-BBMenu file 1 - Compatible with EN Yellow ONLY
+BBMenu file 1 - Compatible with EN RED/BLUE ONLY
 
 
 Source is compiled with RGBDS

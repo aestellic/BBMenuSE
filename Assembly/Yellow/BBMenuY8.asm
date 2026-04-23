@@ -11,7 +11,7 @@ include "bbmenuY.inc"
 include "charmap.inc"
 
 
-def borderTile 	          = $c0
+def borderTile                = $c0
 def snakeTile 		          = $c1
 def foodTile 		          = $c7
 def bgTile  		          = $7f

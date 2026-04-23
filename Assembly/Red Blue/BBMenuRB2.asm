@@ -1,6 +1,6 @@
 /*
 
-BBMenu file 2 - Compatible with EN Yellow ONLY
+BBMenu file 2 - Compatible with EN RED/BLUE ONLY
 
 
 Source is compiled with RGBDS
@@ -51,6 +51,7 @@ db low(dmamenu),         high(dmamenu)
 db low(dmarun),          high(dmarun)
 db low(dmabeast),        high(dmabeast)
 db low(dmaescape),       high(dmaescape)
+dw $DC72 ; dmashiny
 dmapointersend:
 
 ; ----------- MSP pointers ------------
