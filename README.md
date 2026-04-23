@@ -61,17 +61,17 @@ After setting up TimOS (required), you need to insert all [hex code parts](https
 ---
 
 ## ⚠ Warnings - Before you proceed, please make sure to read the following!
-- **DO NOT OPEN** BBMenu with SELECT button until the installation is complete, otherwise a crash is guaranteed, especially if parts 2 and 3 are missing!
+- **DO NOT OPEN** BBMenuSE with SELECT button until the installation is complete, otherwise a crash is guaranteed, especially if parts 2 and 3 are missing!
 - During nickname input, code in part 1 is crucial. If you dont input EXACTLY what is shown, there is a high chance your savegame will be messed up!
 - Always double check that you copy and paste every single byte. This is the stupidest, yet most common way to say goodbye to your save file!
 - **Slip script** allows you to walk through walls. Although it includes some basic prevention, walking outside map's borders risks crashing the game with your savegame being deleted! **Use with Caution!**
   
 ## ⚠ Notes
-Part codes from 2+ are more tolerant to input errors, since their payloads activate only through BBMenu and a crash can indicate which part you need to reinstall.
+Part codes from 2+ are more tolerant to input errors, since their payloads activate only through BBMenuSE and a crash can indicate which part you need to reinstall.
 That being said, here is what every part includes:
 - Part1: Kernel stuff
 - Part2: Constant effect payloads
-- Part3: BBMenu layout
+- Part3: BBMenuSE layout
 - Part4: Run, Slip, Repel, Beast, StealRun, Stealth, Fly, Heal, PC, Items scripts
 - Part5: Moves, Pokemon, Wilds scripts
 - Part6: Trainers, Instatext, Filldex, Badges, Cash, Coins, Duplicator scripts
@@ -83,7 +83,7 @@ That being said, here is what every part includes:
 ---
 
 ### 🔧 How it works:
-Pokémon Generation 1 games contain a large amount of unused space within their save files. BBMenu takes advantage of this by storing its data there through Arbitrary Code Execution (ACE). When the game loads, BBMenu uses specific hijacking techniques to inject its kernel into memory and load any required libraries.
+Pokémon Generation 1 games contain a large amount of unused space within their save files. BBMenuSE takes advantage of this by storing its data there through Arbitrary Code Execution (ACE). When the game loads, BBMenuSE uses specific hijacking techniques to inject its kernel into memory and load any required libraries.
 
 The kernel continuously runs active payloads in the background and can trigger the script menu on demand. Each menu payload is first copied into WRAM before it runs. This design ensures full compatibility with Virtual Console (VC) releases, which cannot execute code directly from the save file — unlike the original Game Boy cartridges.
 
