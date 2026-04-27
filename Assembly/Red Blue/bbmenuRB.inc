@@ -29,6 +29,9 @@ def bankswitch15         = $3301
 
 ; rom
 def tileAddress          = $697e   ; menu icons
+def slideSilhouettesLoop = $40bb
+def hidesprites = (slideSilhouettesLoop + 57)
+def animationLoop = $4106
 
 ; sram
 def sramcopy             = $a000

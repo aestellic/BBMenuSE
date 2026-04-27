@@ -8,16 +8,17 @@
   <img src="Shots/bbmenu1.jpg" width="200"/>
     <img src="Shots/bbmenu2.jpg" width="200"/>
   <img src="Shots/bbmenu3.jpg" width="200"/>
+    <img src="Shots/bbmenu4.jpg" width="200"/>
 </p>
 <p align="center">
-  <img src="Shots/bbmenu4.jpg" width="200"/>
     <img src="Shots/bbmenu5.jpg" width="200"/>
   <img src="Shots/bbmenu6.jpg" width="200"/>
+    <img src="Shots/bbmenu7.jpg" width="200"/>
 </p>
 <p align="center">
-  <img src="Shots/bbmenu7.jpg" width="200"/>
     <img src="Shots/bbmenu8.jpg" width="200"/>
   <img src="Shots/bbmenu9.jpg" width="200"/>
+    <img src="Shots/bbmenu10.jpg" width="200"/>
 </p>
 
 ---
@@ -108,7 +109,7 @@ Feel free to fork, reuse, or propose new modules!
 - [RGBDS](https://rgbds.gbdev.io/), the incredibly powerful compiler used for this project.
 - [QuickRGBDS wrapper](https://github.com/M4n0zz/QuickRGBDS), which made this super complicated project easier to build.
 - TimoVM from [Glitch City Research Institute](https://glitchcity.wiki/wiki/Main_Page) and his [ACE guides](https://glitchcity.wiki/wiki/Guides:TimoVM%27s_gen_1_ACE_setups).
-- [M4n0zz](https://github.com/M4n0zz) from Glitch City Research Institute for creating the QuickRGBDS and the original BBMenu, as well as helping me with modifying BBMenu.
+- [M4n0zz](https://github.com/M4n0zz) from Glitch City Research Institute for creating the QuickRGBDS and the original BBMenu, as well as helping me with creating BBMenuSE.
 - [Cilerba](https://www.youtube.com/@Cilerba), who originally added [shiny indicators to vanilla Red and Blue via ACE](https://github.com/cilerba/ace).
+- The Gears of Progress [[YT](https://www.youtube.com/@thegearsofprogress1964)] [[GH](https://github.com/GearsProgress)], who created a proof of concept shiny animation for Gen I and inspired me to fully implement it within this project.
 - Everyone in [GCRI Discord channel](https://discord.gg/EA7jxJ6). Thank you folks for your motivation and support!
-

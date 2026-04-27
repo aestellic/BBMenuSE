@@ -29,6 +29,9 @@ def bankswitch3f         = $1001
 
 ; rom
 def tileAddress          = $6a28
+def slideSilhouettesLoop = $40c4
+def hidesprites = (slideSilhouettesLoop + 57)
+def animationLoop = $4139
 
 ; sram
 def sramcopy             = $a000
