@@ -35,6 +35,7 @@ BBMenuSE can be installed inside your savegame using [Arbitrary Code Execution](
 - Launch custom **mini-games** like **Snake**!
 - All from an in-game menu, with a simple press of **Select button**!
 - And... see whether Pokemon are **shiny** in battle or on the summary screen!
+- Plus shiny hunt **wild Pokemon**!
 
 More details in [here](https://github.com/aestellic/BBMenuSE/blob/main/Features.md).
 
