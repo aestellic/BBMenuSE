@@ -13,7 +13,7 @@ include "bbmenuRB.inc"
 def newpokemonstackret = $6724
 
 
-SECTION "BBMenuRB1", ROM0
+SECTION "BBMenuRB01", ROM0
 
 start:
 LOAD "Installer", WRAMX[nicknameaddress]

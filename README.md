@@ -23,7 +23,7 @@
 
 ---
 
-Compatible with Pokémon Red, Blue and Yellow English versions, as well as VC releases. 
+Compatible with Pokémon Red, Blue and Yellow English versions, as well as VC releases.
 
 BBMenuSE can be installed inside your savegame using [Arbitrary Code Execution](https://glitchcity.wiki/wiki/Arbitrary_code_execution), thus it can run in **original copies**, unlike any other ROMhacks!
 
@@ -54,10 +54,10 @@ More details in [here](https://github.com/aestellic/BBMenuSE/blob/main/Features.
 After setting up TimOS (required), you need to insert all [hex code parts](https://github.com/aestellic/BBMenuSE/tree/main/Installation), the same way you did with the ACE setup.
 - Copy and paste the code from part1 in the [Nickname Converter](https://timovm.github.io/NicknameConverter/).
 - Write all nickname codes in Nickname Writer and press start in the verification screen of the last code to run it.
-- If you input everything correctly the game does not crash and you can make a save (required for parts 1, 2, and 9). In different case, reset and repeat.
-- Repeat the procedure until every hex part is installed. Parts 3-8 do not require saving the game, since the payloads are installed directly into the save file.
+- If you input everything correctly the game does not crash and you can make a save (required for parts 1, 2, 9, and 11). In different case, reset and repeat.
+- Repeat the procedure until every hex part is installed. Other parts do not require saving the game, since the payloads are installed directly into the save file.
 
-**If migrating from stock BBMenu, you only need to (re)install parts 2, 9, and 10. Remember that you must save after installing parts 2 and 9.**
+**If migrating from stock BBMenu, you only need to (re)install parts 2, 9, 10, 11, and 12. Remember that you must save after installing parts 2 and 9.**
 
 ---
 
@@ -66,7 +66,8 @@ After setting up TimOS (required), you need to insert all [hex code parts](https
 - During nickname input, code in part 1 is crucial. If you dont input EXACTLY what is shown, there is a high chance your savegame will be messed up!
 - Always double check that you copy and paste every single byte. This is the stupidest, yet most common way to say goodbye to your save file!
 - **Slip script** allows you to walk through walls. Although it includes some basic prevention, walking outside map's borders risks crashing the game with your savegame being deleted! **Use with Caution!**
-  
+- Emulator compatibility was only tested with [BGB](https://bgb.bircd.org/) (everything works) and mGBA (everything works when using an SGB bios). If you're using an emulator other than BGB, **make sure to use a BIOS file.**
+
 ## ⚠ Notes
 Part codes from 2-8 are more tolerant to input errors, since their payloads activate only through BBMenuSE and a crash can indicate which part you need to reinstall.
 That being said, here is what every part includes:
@@ -78,8 +79,8 @@ That being said, here is what every part includes:
 - Part6: Trainers, Instatext, Filldex, Badges, Cash, Coins, Duplicator scripts
 - Part7: Pong
 - Part8: Snake
-- Part9: Shiny Indicator
-- Part10: Shiny Indicator Enabler
+- Part9: Shiny Indicator, Animation, SFX, DV Fix
+- Part10: Shiny Indicator, Animation. SFX, DV Fix Enabler
 
 ---
 

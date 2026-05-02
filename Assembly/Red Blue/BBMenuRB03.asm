@@ -16,7 +16,7 @@ def scriptsblock1   = 14
 def scriptsblock2   = 22
 
 
-SECTION "BBMenuRB3", ROM0
+SECTION "BBMenuRB03", ROM0
 
 start:
 LOAD "Installer", WRAMX[nicknameaddress]

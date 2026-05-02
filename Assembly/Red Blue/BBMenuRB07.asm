@@ -28,7 +28,7 @@ def sinstall        = winstall-block2offset
 
 
 
-SECTION "BBMenuRB7", ROM0
+SECTION "BBMenuRB07", ROM0
 
 start:
 LOAD "Installer", WRAMX[nicknameaddress]

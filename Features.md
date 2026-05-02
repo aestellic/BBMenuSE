@@ -112,7 +112,13 @@ Starts a classic Snake minigame.
 
 Shows an exclamation mark if a Pokemon is shiny
 * Runs automatically (you do not need to toggle this in the menu)
-* In wild battles, a shiny animation will play if the pokemon is shiny
+* In wild battles, a shiny animation will play if the wild pokemon is shiny
 * In battle, the exclamation mark appears below the name of opposing Pokemon
 * On the summary screen, the exclamation mark appears below the nickname of a Pokemon
 
+### **DV Fix**
+
+Allows wild Pokemon to generate with all 65536 DV combinations
+
+* This allows you to shiny hunt wild pokemon! (do note that they may not be considered legitimate)
+* Odds are standard 1/8192

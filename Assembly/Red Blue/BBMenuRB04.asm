@@ -1,13 +1,13 @@
 /*
 
-BBMenu file 4 - Compatible with EN Yellow ONLY
+BBMenu file 4 - Compatible with EN RED/BLUE ONLY
 
 
 Source is compiled with RGBDS
 */
 
-include "pokeyellow.inc"
-include "bbmenuY.inc"
+include "pokered.inc"
+include "bbmenuRB.inc"
 include "charmap.inc"
 
 
@@ -15,7 +15,7 @@ def wcommon     = $c86a
 def scommon    = smenulist-112
 
 
-SECTION "BBMenuY4", ROM0
+SECTION "BBMenuRB04", ROM0
 
 start:
 LOAD "Installer", WRAMX[nicknameaddress]
@@ -108,9 +108,9 @@ ld   hl, text                 ; address to print text from
 jp   PrintText
 text:
 db   $00                      ; TX_START
-db   "Check for more:"
+db   "Made with love"
 db   $4f                      ; new line
-db   "github.com/M4n0zz"
+db   "by aestellic"
 db   $57                      ; ends text
 
 ;;;;;;;;;;;; Enablers ;;;;;;;;;;;; 
@@ -222,8 +222,9 @@ jp   bankswitch3
 
 ;;;;;;;;;;;; PC payload ;;;;;;;;;;;; 
 anypc:
+ld   b, $05
 ld   hl, ActivatePC+3
-call bankswitch5
+call Bankswitch
 ld   hl, sp+10                     ; calfunctionintable pushes some values into the stack, so we change sp to jump back
 ld   sp, hl
 xor  a                             ; a should be 0 to make codebox load properly
@@ -309,8 +310,6 @@ playsound:
 call PlaySound      			; Play the sound
 
 jr   reload                        ; reload menu
-
-
 
 mapend:
 

@@ -18,7 +18,7 @@ def stackrun        = $dffd
 def returnrun       = $0402
 
 
-SECTION "BBMenuRB2", ROM0
+SECTION "BBMenuRB02", ROM0
 
 start:
 LOAD "Installer", WRAMX[nicknameaddress]

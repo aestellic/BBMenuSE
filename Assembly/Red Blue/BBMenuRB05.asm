@@ -22,7 +22,7 @@ def winstall        = $ca31
 def sinstall        = winstall-block1offset
 
 
-SECTION "BBMenuRB5", ROM0
+SECTION "BBMenuRB05", ROM0
 
 start:
 LOAD "Installer", WRAMX[nicknameaddress]

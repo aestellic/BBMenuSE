@@ -18,7 +18,7 @@ def returntrainer   = DisplayListMenuIDLoop+6
 
 
 
-SECTION "BBMenuRB6", ROM0
+SECTION "BBMenuRB06", ROM0
 
 start:
 LOAD "Installer", WRAMX[nicknameaddress]

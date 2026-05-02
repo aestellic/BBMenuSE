@@ -1,23 +1,23 @@
 /*
 
-BBMenu file 9 - Compatible with EN Yellow ONLY
+BBMenu file 9 - Compatible with EN RED/BLUE ONLY
 
 
 Source is compiled with RGBDS
 */
 
-include "pokeyellow.inc"
-include "bbmenuY.inc"
+include "pokered.inc"
+include "bbmenuRB.inc"
 include "charmap.inc"
 
-def dmashiny        = $dc71
-def sdmashiny       = $dc71-boxoffset
+def dmashiny        = $dc72
+def sdmashiny       = dmashiny-boxoffset
 DEF SHINY_ATK_MASK EQU %0010
 DEF SHINY_DEF_DV EQU 10
 DEF SHINY_SPD_DV EQU 10
 DEF SHINY_SPC_DV EQU 10
 
-SECTION "BBMenuY9", ROM0
+SECTION "BBMenuRB09", ROM0
 
 start:
 LOAD "Installer", WRAMX[nicknameaddress]
@@ -76,6 +76,13 @@ ret  nz                  ; end script if trainer battle - animation crashes the 
 
 .battle
 	; Battle has been confirmed
+	ld hl, $DFF3
+	ld b, HIGH(callDoBattleTransition)
+	ld c, LOW(callDoBattleTransition)
+	ld d, HIGH(.fixDVs)
+	ld e, LOW(.fixDVs)
+	call stackhijack
+
 	ld hl, wEnemyMonDVs
 
 .shinyCheck ; Ported from GSC
@@ -105,15 +112,15 @@ ret  nz                  ; end script if trainer battle - animation crashes the 
 ; Shiny (!)
 .checkForAnimation
 	; this checks if it should replace the animation pointer in the stack
-	ld hl, $DFED
-	ld b, HIGH(hidesprites)
-	ld c, LOW(hidesprites)
+	ld hl, $DFF1
+	ld b, HIGH(hideSprites)
+	ld c, LOW(hideSprites)
 	ld d, HIGH(.shinySoundEffect)
 	ld e, LOW(.shinySoundEffect)
 	call stackhijack
 
 	; we need to run code depending on if stackhijack returned early
-	ld hl, $DFED
+	ld hl, $DFF1
 	ld a, LOW(.shinySoundEffect)
 	cp a, [hl]
 	jr nz, .checkForAnimation_exit
@@ -125,6 +132,7 @@ ret  nz                  ; end script if trainer battle - animation crashes the 
 	; stackhijack did not return early
 	ld a, $00
 	ld [$FFF3], a ; set current turn to player's
+
 	
 .checkForAnimation_exit
 	; Check wTilemap tile for opponent HUD ('HP' tile)
@@ -178,7 +186,7 @@ ret  nz                  ; end script if trainer battle - animation crashes the 
 	
 	ld a, $0F
 	call BankswitchHome
-	jp hidesprites + 1
+	ret
 
 .animationData
     db $FD	; SE_DARK_SCREEN_PALETTE
@@ -191,6 +199,42 @@ ret  nz                  ; end script if trainer battle - animation crashes the 
     db $FC	; SE_RESET_SCREEN_PALETTE
     db $01
     db $FF	; terminator
+
+.fixDVs
+	; the game uses 4 random calls to check if an encounter should start and to generate the DVs. 
+	; using more than 3 random calls successively causes the output of random to be limited by the results of the first 3 calls
+	; this limitation normally results in (65336 * encounterRate / 256) possible DV combinations (out of the 65536 total) being possible
+	
+	; calling delayframe after the third random call lets the randomness "replenish"
+	call DelayFrame
+
+	; DVs have already been set by the time our DMA payload is called, so we need to regenerate and set them ourselves
+	call BattleRandom
+	ld b, a
+	call BattleRandom
+
+	ld hl, wEnemyMonDVs
+	ld [hli], a
+	ld [hl], b
+	ld de, wEnemyMonLevel
+	ld a, [wCurEnemyLevel]
+	ld [de], a
+	inc de
+	ld b, $0
+	ld hl, wEnemyMonHP
+	push hl
+	call CalcStats
+	pop hl
+
+	ld a, [wEnemyMonMaxHP]
+	ld [hli], a
+	ld a, [wEnemyMonMaxHP+1]
+	ld [hli], a
+	xor a
+	inc hl
+	ld [hl], a
+
+	jp callDoBattleTransition
 
 scriptsend:
 ENDL
