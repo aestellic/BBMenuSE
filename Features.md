@@ -120,5 +120,5 @@ Shows an exclamation mark if a Pokemon is shiny
 
 Allows wild Pokemon to generate with all 65536 DV combinations
 
-* This allows you to shiny hunt wild pokemon! (do note that they may not be considered legitimate)
-* Odds are standard 1/8192
+* This allows you to shiny hunt wild pokemon! (do note that they may not be considered legitimate until transferred up to Gen 7)
+* Odds are the standard 1/8192
