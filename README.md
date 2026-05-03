@@ -68,6 +68,7 @@ After setting up TimOS (required), you need to insert all [hex code parts](https
 - Always double check that you copy and paste every single byte. This is the stupidest, yet most common way to say goodbye to your save file!
 - **Slip script** allows you to walk through walls. Although it includes some basic prevention, walking outside map's borders risks crashing the game with your savegame being deleted! **Use with Caution!**
 - Emulator compatibility was only tested with [BGB](https://bgb.bircd.org/) (everything works) and mGBA (everything works when using an SGB bios). If you're using an emulator other than BGB, **make sure to use a BIOS file.**
+- Currently, **the shiny animation does not play on virtual console.** The game will not crash or softlock, it just won't play when you encounter a shiny.
 
 ## ⚠ Notes
 Part codes from 2-8 are more tolerant to input errors, since their payloads activate only through BBMenuSE and a crash can indicate which part you need to reinstall.
