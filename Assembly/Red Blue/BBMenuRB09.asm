@@ -24,6 +24,12 @@ LOAD "Installer", WRAMX[nicknameaddress]
 ;;;;;;;;;;;; Installer payload ;;;;;;;;;;;; 
 installer:
 
+ld hl, RandomAdd
+ld a, [hRandomAdd]
+ld [hli], a
+ld a, [hRandomSub]
+ld [hl], a ; RandomSub
+
 call opensram1
 
 ; move scripts into box data
@@ -46,6 +52,8 @@ scriptstart:
 ;;;;;;;;;;;; DMA payloads ;;;;;;;;;;;;
 
 shiny:
+call RandomDVs_
+
 ld   a, [wIsInBattle]
 dec  a
 jr   z, .battle          ; wIsInBattle == 1, wild battle is active
@@ -132,7 +140,6 @@ ret  nz                  ; end script if trainer battle - animation crashes the 
 	; stackhijack did not return early
 	ld a, $00
 	ld [$FFF3], a ; set current turn to player's
-
 	
 .checkForAnimation_exit
 	; Check wTilemap tile for opponent HUD ('HP' tile)
@@ -186,7 +193,7 @@ ret  nz                  ; end script if trainer battle - animation crashes the 
 	
 	ld a, $0F
 	call BankswitchHome
-	ret
+	jp hideSprites + 1
 
 .animationData
     db $FD	; SE_DARK_SCREEN_PALETTE
@@ -201,21 +208,14 @@ ret  nz                  ; end script if trainer battle - animation crashes the 
     db $FF	; terminator
 
 .fixDVs
-	; the game uses 4 random calls to check if an encounter should start and to generate the DVs. 
-	; using more than 3 random calls successively causes the output of random to be limited by the results of the first 3 calls
-	; this limitation normally results in (65336 * encounterRate / 256) possible DV combinations (out of the 65536 total) being possible
-	
-	; calling delayframe after the third random call lets the randomness "replenish"
-	call DelayFrame
-
 	; DVs have already been set by the time our DMA payload is called, so we need to regenerate and set them ourselves
-	call BattleRandom
-	ld b, a
-	call BattleRandom
+	call RandomDVs_
+	ld a, [RandomAdd]
 
 	ld hl, wEnemyMonDVs
 	ld [hli], a
-	ld [hl], b
+	ld a, [RandomSub]
+	ld [hl], a
 	ld de, wEnemyMonLevel
 	ld a, [wCurEnemyLevel]
 	ld [de], a
@@ -235,6 +235,32 @@ ret  nz                  ; end script if trainer battle - animation crashes the 
 	ld [hl], a
 
 	jp callDoBattleTransition
+
+; for a full deep dive into gen 1 rng, see https://www.youtube.com/watch?v=BcIxMyf8yHY and/or https://www.dragonflycave.com/mechanics/gen-i-rng/
+
+; the game uses 3 random calls to check if an encounter should start and to generate the DVs. 
+; using more than 2 random calls successively without a naturally random amount of time passing (i.e. user input) causes the output of random to be limited by the results of the first 2 calls
+; this limitation normally results in (65336 * encounterRate / 256) possible DV combinations (out of the 65536 total) being possible
+
+; by recreating the random function, we can ensure that only 2 calls are used successively (1 every frame, 1 to generate the DVs)
+
+RandomDVs_:
+; Generate a random 16-bit value.
+	ld a, [rDIV]
+	ld b, a
+	ld a, [RandomAdd]
+	adc b
+	ld [RandomAdd], a
+	ld a, [rDIV]
+	ld b, a
+	ld a, [RandomSub]
+	sbc b
+	ld [RandomSub], a
+	ret
+RandomAdd:
+	db
+RandomSub:
+	db
 
 scriptsend:
 ENDL

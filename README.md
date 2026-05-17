@@ -69,6 +69,7 @@ After setting up TimOS (required), you need to insert all [hex code parts](https
 - **Slip script** allows you to walk through walls. Although it includes some basic prevention, walking outside map's borders risks crashing the game with your savegame being deleted! **Use with Caution!**
 - Emulator compatibility was only tested with [BGB](https://bgb.bircd.org/) (everything works) and mGBA (everything works when using an SGB bios). If you're using an emulator other than BGB, **make sure to use a BIOS file.**
 - Currently, **the shiny animation does not play on virtual console.** The game will not crash or softlock, it just won't play when you encounter a shiny.
+- If you installed BBMenuSE before May 16th, 2026, please reinstall part 9 or download a new save file. The shiny odds were lower than 1/8192 for both static and wild encounters. 
 
 ## ⚠ Notes
 Part codes from 2-8 are more tolerant to input errors, since their payloads activate only through BBMenuSE and a crash can indicate which part you need to reinstall.
@@ -115,4 +116,5 @@ Feel free to fork, reuse, or propose new modules!
 - [M4n0zz](https://github.com/M4n0zz) from Glitch City Research Institute for creating the QuickRGBDS and the original BBMenu, as well as helping me with creating BBMenuSE.
 - [Cilerba](https://www.youtube.com/@Cilerba), who originally added [shiny indicators to vanilla Red and Blue via ACE](https://github.com/cilerba/ace).
 - The Gears of Progress [[YT](https://www.youtube.com/@thegearsofprogress1964)] [[GH](https://github.com/GearsProgress)], who created a proof of concept shiny animation for Gen I and inspired me to fully implement it within this project.
+- Danphibia from [Glitch City Research Institute](https://glitchcity.wiki/wiki/Main_Page) for testing and helping me fix the DVs.
 - Everyone in [GCRI Discord channel](https://discord.gg/EA7jxJ6). Thank you folks for your motivation and support!

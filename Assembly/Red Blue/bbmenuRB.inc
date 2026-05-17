@@ -90,6 +90,7 @@ def codeboxon            = $df2b
 def CloseSRAM            = $df4e
 
 ; hram
+def rDIV                 = $ff04
 def boxflag              = $ffa8   ; it holds current codebox status
 def hbackup              = $ffdf   ; holds a value temporarily, used for various scripts
 

@@ -30,7 +30,7 @@ def bankswitch3f         = $1001
 ; rom
 def tileAddress          = $6a28
 def slideSilhouettesLoop = $40c4
-def hidesprites = (slideSilhouettesLoop + $39)
+def hideSprites = (slideSilhouettesLoop + $39)
 def animationLoop = $4139
 def doBattleTransitionOffset = (DoBattleTransitionAndInitBattleVariables + $1E)
 
@@ -89,6 +89,7 @@ def topstack             = $df15
 def codeboxon            = $df2b
 
 ; hram
+def rDIV                 = $ff04
 def boxflag              = $ffa8   ; it holds current codebox status
 def hbackup              = $ffdf   ; holds a value temporarily, used for various scripts
 
